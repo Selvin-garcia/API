@@ -1,0 +1,532 @@
+{
+	"info": {
+		"_postman_id": "972d033c-ecfc-456a-b036-b8aea8e69046",
+		"name": "360-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28559020"
+	},
+	"item": [
+		{
+			"name": "rolRoutes",
+			"item": [
+				{
+					"name": "CrearRoles",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"nombre_rol\": \"Administrador2\"\r\n  },\r\n  {\r\n    \"nombre_rol\": \"Usuario1\"\r\n  }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/roles/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"roles",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerRoles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[1,2,3]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/roles/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"roles",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarRoles",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[ {\"idRol\": 1, \"nombre_rol\" : \"Administrador\", \"id_estado\": 1 }]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/roles/actualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"roles",
+								"actualizar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "clienteRoutes",
+			"item": [
+				{
+					"name": "CrearClientes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"razon_social\": \"Empresa N\",\r\n        \"nombre_comercial\": \"Tienda N\",\r\n        \"direccion_envio\": \"5 calle 3-41\",\r\n        \"telefono\": \"20440024\",\r\n        \"correo_electronico\": \"contacto@empresan.com\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/clientes/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clientes",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerClientes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[1,2]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/clientes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clientes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarClientes",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[ {\"idCliente\": 1, \"razon_social\" : \"Empresa ABCD\", \"nombre_comercial\": \"Tienda ABCD\", \"direccion_envio\": \"Avenida Reforma 19-01\",\"telefono\": \"22022023\",\"correo_electronico\": \"contacto@tiendaabcd.com\" }]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/clientes/actualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clientes",
+								"actualizar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "productoRoutes",
+			"item": [
+				{
+					"name": "CrearProductos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n        {\"nombre_producto\": \"Camiseta Azul2\", \"marca\": \"Marca X\", \"codigo\": \"C002\", \"stock\": 22, \"precio\": 100.00, \"foto\": null, \"id_categoria_producto\": 1, \"id_estado\": 1}\r\n       \r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/productos/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"productos",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ordenRoutes",
+			"item": [
+				{
+					"name": "CrearOrden",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"direccion_envio\": \"Calle San Juan 23-5\",\r\n    \"telefono\": \"43555552\",\r\n    \"correo_electronico\": \"cliente@test.com\",\r\n    \"fecha_envio\": \"2024-12-23\",\r\n    \"id_usuario\": 3,\r\n    \"id_estado\": 1,\r\n    \"detalles\": [\r\n        {\r\n            \"cantidad\": 4,\r\n            \"precio\": 100.00,\r\n            \"id_producto\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/ordenes/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ordenes",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "usuarioRoutes",
+			"item": [
+				{
+					"name": "CrearUsuarios",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n        {\r\n            \"correo_electronico\": \"usuariopost@test.com\",\r\n            \"nombre_completo\": \"usuariopost@test.com\",\r\n            \"contrasena_usuario\": \"usuariotest\",\r\n            \"telefono\": \"34404045\",\r\n            \"fecha_nacimiento\": \"1994-02-01\",\r\n            \"id_rol\": 2,\r\n            \"id_estado\": 1\r\n        }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/usuarios/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"usuarios",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerUsuarios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[1, 2, 3]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/usuarios/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"usuarios",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarUsuarios",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n        {\r\n            \"idUsuario\": 1,\r\n            \"correo_electronico\": \"administrador_actualizado2@test.com\",\r\n            \"nombre_completo\": \"Administrador Actualizado2\",\r\n            \"contrasena_usuario\": \"nuevacontrasena1234\",\r\n            \"telefono\": \"56093990\",\r\n            \"fecha_nacimiento\": \"1989-06-17\",\r\n            \"id_rol\": 1,\r\n            \"id_estado\": 1\r\n        }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/usuarios/actualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"usuarios",
+								"actualizar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autorizacion",
+			"item": [
+				{
+					"name": "Registrarse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\r\n    \"nombre_completo\": \"Admin4\",\r\n    \"correo_electronico\": \"admin4@example.com\",\r\n    \"contrasena_usuario\": \"123456\",\r\n    \"telefono\": \"34404040\",\r\n    \"fecha_nacimiento\": \"1999-01-01\",\r\n    \"id_rol\": 1,\r\n    \"id_estado\": 1\r\n}]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/autorizacion/registro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"autorizacion",
+								"registro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\r\n    \"nombre_completo\": \"Admin4\",\r\n    \"contrasena_usuario\": \"123456\"\r\n}]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/autorizacion/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"autorizacion",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarUsuarios",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n        {\r\n            \"idUsuario\": 1,\r\n            \"correo_electronico\": \"administrador_actualizado2@test.com\",\r\n            \"nombre_completo\": \"Administrador Actualizado2\",\r\n            \"contrasena_usuario\": \"nuevacontrasena1234\",\r\n            \"telefono\": \"56093990\",\r\n            \"fecha_nacimiento\": \"1989-06-17\",\r\n            \"id_rol\": 1,\r\n            \"id_estado\": 1\r\n        }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/usuarios/actualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"usuarios",
+								"actualizar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AccesosMiddleware",
+			"item": [
+				{
+					"name": "ObtenerTodosLosUsuarios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImlhdCI6MTczNDkxMDM4NywiZXhwIjoxNzM0OTk2Nzg3fQ.aBUemjKnw-VZQc9ts8p9Vgegj-ieELZYdZ4gYSsWlg8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[1, 2, 3]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/usuarios/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"usuarios",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categoriaProductoRoutes",
+			"item": [
+				{
+					"name": "CrearCategoriaProductos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n        {\"nombre_categoria\": \"Accesorios2\", \"id_estado\": 2},\r\n        {\"nombre_categoria\": \"Zapatos2\", \"id_estado\": 2},\r\n        {\"nombre_categoria\": \"Juguetes2\", \"id_estado\": 1}\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/categoriaProductos/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categoriaProductos",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
