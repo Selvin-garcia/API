@@ -97,13 +97,13 @@ exports.loginUsuario = async (req, res, next) => {
         }
 
         // Extraer el nombre del primer usuario en el array
-        const { nombre_completo, contrasena_usuario } = usuarios[0];
+        const { correo_electronico, contrasena_usuario } = usuarios[0];
 
-        // Buscar el usuario por nombre de usuario
+        // Buscar el usuario por nombre correo electronico
         const usuario = await sequelize.query(
-            'SELECT idUsuario, contrasena_usuario FROM Usuario WHERE nombre_completo = :nombre_completo',
+            'SELECT idUsuario, contrasena_usuario FROM Usuario WHERE correo_electronico = :correo_electronico',
             {
-                replacements: { nombre_completo },
+                replacements: { correo_electronico },
                 type: sequelize.QueryTypes.SELECT
             }
         );
