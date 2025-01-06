@@ -5,7 +5,7 @@ const router = express.Router();
 
 // Definir rutas
 
-router.post("/crear", verificarTokenController.verificarTokenAdmin,rolController.crearRoles);
+router.post("/crear",rolController.crearRoles);
 router.get("/", rolController.obtenerRoles);
 router.put("/actualizar", verificarTokenController.verificarTokenAdmin,rolController.actualizarRoles);
 

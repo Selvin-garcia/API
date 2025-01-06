@@ -7,8 +7,8 @@ const router = express.Router();
 
 // Definir rutas
 
-router.post("/crear", verificarTokenController.verificarTokenAdminOperador,usuarioController.crearUsuarios);
-router.get("/",verificarTokenController.verificarTokenAdminOperador, usuarioController.obtenerUsuarios);
-router.put("/actualizar", verificarTokenController.verificarTokenAdminOperador,usuarioController.actualizarUsuarios);
+router.post("/crear",usuarioController.crearUsuarios);
+router.get("/", usuarioController.obtenerUsuarios);
+router.put("/actualizar",usuarioController.actualizarUsuarios);
 
 module.exports = router;
