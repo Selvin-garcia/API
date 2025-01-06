@@ -7,7 +7,7 @@ const fs = require('fs');
 // Configure Multer storage
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, '../uploads/imagenes')); // Folder de destino para la carga de imagenes
+        cb(null, path.join(__dirname, '../uploads/backend/productos')); // Folder de destino para la carga de imagenes
     },
     filename: function (req, file, cb) {
         cb(null, Date.now() + path.extname(file.originalname)); // Usar fecha de carga
