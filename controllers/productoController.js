@@ -10,7 +10,7 @@ const storage = multer.diskStorage({
         cb(null, path.join(__dirname, '../uploads/backend/productos')); // Folder de destino para la carga de imagenes
     },
     filename: function (req, file, cb) {
-        cb(null, Date.now() + path.extname(file.originalname)); // Usar fecha de carga
+        cb(null,file.originalname); // Usar fecha de carga
     }
 });
 
